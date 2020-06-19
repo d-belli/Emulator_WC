@@ -1,0 +1,14 @@
+D:\DOD\Open WYD Server\Emulator\Build\Emulator.exe.config
+D:\DOD\Open WYD Server\Emulator\Build\Emulator.exe
+D:\DOD\Open WYD Server\Emulator\Build\Emulator.pdb
+D:\DOD\Open WYD Server\Emulator\obj\Debug\Emulator.csproj.CoreCompileInputs.cache
+D:\DOD\Open WYD Server\Emulator\obj\Debug\Emulator.exe
+D:\DOD\Open WYD Server\Emulator\obj\Debug\Emulator.pdb
+D:\DOD\Open WYD Server\Emulator\obj\Debug\Emulator.csprojResolveAssemblyReference.cache
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\Build\Emulator.exe.config
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\Build\Emulator.exe
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\Build\Emulator.pdb
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\obj\Debug\Emulator.csprojAssemblyReference.cache
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\obj\Debug\Emulator.csproj.CoreCompileInputs.cache
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\obj\Debug\Emulator.exe
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator2\obj\Debug\Emulator.pdb

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C1C3297-0941-4C5C-A336-4CCDCB9F5B51}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Emulator</RootNamespace>
+    <AssemblyName>Emulator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Emulator.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Game\Base\Misc\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.10.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.10.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\Base\Enums.cs" />
+    <Compile Include="Game\Base\Game.cs" />
+    <Compile Include="Game\Base\InitItem.cs" />
+    <Compile Include="Game\Base\Tasks.cs" />
+    <Compile Include="Game\Base\Misc\Config.cs" />
+    <Compile Include="Game\Base\Misc\Log.cs" />
+    <Compile Include="Game\Base\Misc\Program.cs" />
+    <Compile Include="Game\Base\Rate.cs" />
+    <Compile Include="Game\Emulator\Channel\Map\Coord.cs" />
+    <Compile Include="Game\Emulator\Channel\Map\Map.cs" />
+    <Compile Include="Game\Emulator\Channel\Map\Surrounds.cs" />
+    <Compile Include="Game\Emulator\Client\Account\Storage.cs" />
+    <Compile Include="Game\Emulator\Server\Base\Server.cs" />
+    <Compile Include="Game\Emulator\Channel\Base\Channel.cs" />
+    <Compile Include="Game\Emulator\Client\Account\Account.cs" />
+    <Compile Include="Game\Emulator\Client\Base\Client.cs" />
+    <Compile Include="Game\Emulator\Client\Base\ClientStatus.cs" />
+    <Compile Include="Game\Emulator\Character\Base\Character.cs" />
+    <Compile Include="Game\GameDao\GenericUserDAO.cs" />
+    <Compile Include="Game\GameDao\UserAccountDAO.cs" />
+    <Compile Include="Game\GameDao\UserMobDAO.cs" />
+    <Compile Include="Game\Packet\Packets\P_26E.cs" />
+    <Compile Include="Game\Packet\Packets\P_291.cs" />
+    <Compile Include="Game\Packet\Packets\P_334.cs" />
+    <Compile Include="Game\Packet\Packets\P_369.cs" />
+    <Compile Include="Game\Packet\Packets\P_37D.cs" />
+    <Compile Include="Game\Packet\Packets\P_37E.cs" />
+    <Compile Include="Game\Packet\Packets\P_37F.cs" />
+    <Compile Include="Game\Packet\Packets\P_28B.cs" />
+    <Compile Include="Game\Packet\Packets\P_3AB.cs" />
+    <Compile Include="Game\Packet\Packets\P_3B9.cs" />
+    <Compile Include="Game\Tools\ExportarToXml.cs" />
+    <Compile Include="Game\Tools\ImportarMob.cs" />
+    <Compile Include="Game\Packet\Base\Functions.cs" />
+    <Compile Include="Game\Packet\Base\PControl.cs" />
+    <Compile Include="Game\Packet\Base\PConvert.cs" />
+    <Compile Include="Game\Packet\Base\PSecurity.cs" />
+    <Compile Include="Game\Packet\Packets\P_182.cs" />
+    <Compile Include="Game\Packet\Packets\P_2CB.cs" />
+    <Compile Include="Game\Packet\Packets\P_277.cs" />
+    <Compile Include="Game\Packet\Packets\P_2E4.cs" />
+    <Compile Include="Game\Packet\Packets\P_338.cs" />
+    <Compile Include="Game\Packet\Packets\P_36A.cs" />
+    <Compile Include="Game\Packet\Packets\P_373.cs" />
+    <Compile Include="Game\Packet\Packets\P_378.cs" />
+    <Compile Include="Game\Packet\Packets\P_39D.cs" />
+    <Compile Include="Game\Packet\Packets\P_3AF.cs" />
+    <Compile Include="Game\Packet\Packets\P_101.cs" />
+    <Compile Include="Game\Packet\Packets\P_10A.cs" />
+    <Compile Include="Game\Packet\Packets\P_110.cs" />
+    <Compile Include="Game\Packet\Packets\P_112.cs" />
+    <Compile Include="Game\Packet\Packets\P_114.cs" />
+    <Compile Include="Game\Packet\Packets\P_165.cs" />
+    <Compile Include="Game\Packet\Packets\P_17C.cs" />
+    <Compile Include="Game\Packet\Packets\P_185.cs" />
+    <Compile Include="Game\Packet\Packets\P_20D.cs" />
+    <Compile Include="Game\Packet\Packets\P_20F.cs" />
+    <Compile Include="Game\Packet\Packets\P_211.cs" />
+    <Compile Include="Game\Packet\Packets\P_213.cs" />
+    <Compile Include="Game\Packet\Packets\P_215.cs" />
+    <Compile Include="Game\Packet\Packets\P_27B.cs" />
+    <Compile Include="Game\Packet\Packets\P_290.cs" />
+    <Compile Include="Game\Packet\Packets\P_333.cs" />
+    <Compile Include="Game\Packet\Packets\P_336.cs" />
+    <Compile Include="Game\Packet\Packets\P_337.cs" />
+    <Compile Include="Game\Packet\Packets\P_364.cs" />
+    <Compile Include="Game\Packet\Packets\P_36B.cs" />
+    <Compile Include="Game\Packet\Packets\P_36C.cs" />
+    <Compile Include="Game\Packet\Packets\P_376.cs" />
+    <Compile Include="Game\Packet\Packets\P_379.cs" />
+    <Compile Include="Game\Packet\Packets\P_37A.cs" />
+    <Compile Include="Game\Packet\Packets\P_387.cs" />
+    <Compile Include="Game\Packet\Packets\P_388.cs" />
+    <Compile Include="Game\Packet\Packets\P_FDE.cs" />
+    <Compile Include="Game\Packet\Structs\SAffect.cs" />
+    <Compile Include="Game\Packet\Structs\SAffectMin.cs" />
+    <Compile Include="Game\Packet\Structs\SCharList.cs" />
+    <Compile Include="Game\Packet\Structs\SCharListEquip.cs" />
+    <Compile Include="Game\Packet\Structs\SCharListName.cs" />
+    <Compile Include="Game\Packet\Structs\Score.cs" />
+    <Compile Include="Game\Packet\Structs\SHeader.cs" />
+    <Compile Include="Game\Packet\Structs\SItem.cs" />
+    <Compile Include="Game\Packet\Structs\SItemEF.cs" />
+    <Compile Include="Game\Packet\Structs\SItemList.cs" />
+    <Compile Include="Game\Packet\Structs\SItemListEF.cs" />
+    <Compile Include="Game\Packet\Structs\SMob.cs" />
+    <Compile Include="Game\Packet\Structs\SMobList.cs" />
+    <Compile Include="Game\Packet\Structs\SPosition.cs" />
+    <Compile Include="Game\Packet\Structs\SSkillList.cs" />
+    <Compile Include="Game\Packet\Structs\SStatus.cs" />
+    <Compile Include="Game\Tools\Struct\STRUCT_MOB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Game\Base\Misc\app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,2 @@
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator\Game\GameDao\obj\Debug\GameDao.csprojAssemblyReference.cache
+C:\Users\ferna\OneDrive\Área de Trabalho\Emulator\Game\GameDao\obj\Debug\GameDao.csproj.CoreCompileInputs.cache
